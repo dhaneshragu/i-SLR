@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>About</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+	<script defer src="{{ url_for('static', filename='assets/fontawesome/js/all.min.js') }}"></script>
+    
+	
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/plugins/highlight/styles/monokai-sublime.css') }}">
+    
+    <!-- Theme CSS -->  
+	
+    <link id="theme-style" rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme-7.css') }}">
+    
+
+</head> 
+
+<body style="margin: 0; padding: 0; overflow: auto; height: 100vh;">
+    
+	<header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0">i-SLR</h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-1 pt-lg-0">
+					
+				    <img class="profile-image mb-2 rounded-circle mx-auto" src="{{ url_for('static', filename='assets/images/profile.png') }}" alt="image" >			
+					
+					<div class="bio mb-2">i-SLR : The bridge between gifted and differently-abled.</div><!--//bio-->
+					<ul class="social-list list-inline py-2 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+					    <a class="nav-link" href="{{ url_for('ISL') }}"><i class="fas fa-home fa-fw me-2"></i>Indian Sign Language<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="{{ url_for('ASL') }}"><i class="fas fa-bookmark fa-fw me-2"></i>American Sign Language</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link active" href="/"><i class="fas fa-user fa-fw me-2"></i>About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper" style="box-sizing: border-box; margin-bottom: 0; height: 100vh;">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Why i-SLR ?</h2>
+			    </header>
+			    
+
+					<blockquote class="blockquote m-lg-5 py-3   ps-4 px-lg-5">
+						<p class="mb-2">Deafness is not a tragedy. It's a community bound by a common language and a sense of pride.</p>
+						<footer class="blockquote-footer mt-0">Marlee Matlin</footer>
+					</blockquote>
+
+
+					<div class="blog-post-body">
+						<figure class="blog-banner">
+							<a href="https://made4dev.com"><img class="img-fluid" src="assets/images/blog/blog-post-banner.jpg" alt="image"></a>
+							<figcaption class="mt-2 text-center image-caption">Image Credit: <a class="theme-link" href="https://made4dev.com?ref=devblog" target="_blank">made4dev.com (Premium Programming T-shirts)</a></figcaption>
+						</figure>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At minima inventore quod molestiae vel vero quam hic quisquam quo, rerum totam ut repellendus magnam, delectus voluptas libero! Explicabo, ex dolore!</p>
+					</div>
+    		</div>
+		</article>
+	</div>
+
+    <footer class="text-center footer py-2 theme-bg-dark">
+		<small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by Dhanesh & Prabhanjan <br>Thanks to Xiaoying Riley for the template</small>
+	</footer>
+       
+    <!-- Javascript -->          
+    <script src="{{ url_for('static', filename='assets/plugins/popper.min.js') }}"></script> 
+    <script src="{{ url_for('static', filename='assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    
+</body>
+</html> 
+
