@@ -6,6 +6,7 @@ import model
 import mediapipe as mp
 import cv2
 import torch
+import json
 from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import StratifiedGroupKFold
 from torch.utils.data import SequentialSampler, RandomSampler
@@ -52,6 +53,9 @@ def send_image():
     image_data = buffer.tobytes()
 
     yield(b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + image_data + b'\r\n')
+net = model.Net()
+net.to(device)
+net.load_state_dict(torch.load('00000038.model.pth', map_location=torch.device('cpu'))['state_dict'])
 
 net_plus = model.Net(num_class=250)
 net_plus.logit = nn.Sequential(
@@ -133,9 +137,14 @@ def recordingISL():
                     with torch.cuda.amp.autocast(enabled = True):
                         output = net_plus(batch)
                         top_values, top_indices = torch.topk(output['sign'].detach().cpu(), k=5)
-                        preds = top_indices.tolist()
+                        preds = top_indices
             final_landmarks=[]
-            return render_template('ISL.html',lang_name ="Indian Sign Language" , preds=preds) # Change to the top5 predictions list 
+            f = open('isl_label2sign.json')
+            data = json.load(f)
+            signs = []
+            for l in preds[0]:
+                signs.append(data[str(l.item())])
+            return render_template('ISL.html',lang_name ="Indian Sign Language" , preds=signs) # Change to the top5 predictions list 
 
     elif request.method == 'GET':
         return render_template('ISL.html',lang_name ="Indian Sign Language")
@@ -145,7 +154,7 @@ def recordingISL():
 
 @app.route('/recordingASL',methods=['POST','GET'])
 def recordingASL():
-    global streaming
+    global streaming, final_landmarks
     if request.method == 'POST':
         if request.form.get('submit-1') == 'Start':
             if not streaming:
@@ -155,7 +164,42 @@ def recordingASL():
             streaming = False
             cap.release()
             cv2.destroyAllWindows()
-            return render_template('ISL.html',lang_name ="American Sign Language",preds=['bye']) # Change to top5 preds list
+            data = pd.DataFrame(final_landmarks, columns=['x','y','z'])
+
+            n_frames = int(len(data) / ROWS_PER_FRAME)
+            xyz = data.values.reshape(n_frames, ROWS_PER_FRAME, 3).astype(np.float32)
+            xyz = xyz - xyz[~np.isnan(xyz)].mean(0,keepdims=True) 
+            xyz = xyz / xyz[~np.isnan(xyz)].std(0, keepdims=True)
+            xyz = torch.from_numpy(xyz).float()
+            xyz = utils.pre_process(xyz)
+            r = {}
+            r['index'] = 0
+            r['xyz'  ] = xyz
+            valid_loader = DataLoader(
+                [r],
+                sampler = SequentialSampler([r]),
+                batch_size  = 1,
+                drop_last   = False,
+                num_workers = 0,
+                pin_memory  = False,
+                collate_fn = inf_null_collate,
+            )
+            net.eval()
+            preds = []
+            for t, batch in enumerate(valid_loader):
+                net.output_type = ['inference']
+                with torch.no_grad():
+                    with torch.cuda.amp.autocast(enabled = True):
+                        output = net(batch)
+                        top_values, top_indices = torch.topk(output['sign'].detach().cpu(), k=5)
+                        preds = top_indices
+
+            f = open('asl_label2sign.json')
+            data = json.load(f)
+            signs = []
+            for l in preds[0]:
+                signs.append(data[str(l.item())])
+            return render_template('ISL.html',lang_name ="American Sign Language",preds=signs) # Change to top5 preds list
     elif request.method == 'GET':
         return render_template('ISL.html',lang_name ="American Sign Language")
 
