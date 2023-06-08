@@ -87,7 +87,7 @@ def ASL():
 
 @app.route('/')
 def index():
-    return render_template('blog-post.html')
+    return render_template('about.html')
 
 @app.route('/video_feed')
 def video_feed():
