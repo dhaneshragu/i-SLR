@@ -1,0 +1,8 @@
+flask
+gunicorn
+opencv-contrib-python-headless
+mediapipe
+numpy
+pandas
+torch
+scikit-learn
