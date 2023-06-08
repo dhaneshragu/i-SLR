@@ -1,5 +1,4 @@
 from flask import Flask,render_template,Response,request
-from threading import Thread
 from mp_funcs import *
 import utils
 import model
@@ -8,8 +7,7 @@ import cv2
 import torch
 import json
 from torch.utils.data import Dataset, DataLoader
-from sklearn.model_selection import StratifiedGroupKFold
-from torch.utils.data import SequentialSampler, RandomSampler
+from torch.utils.data import SequentialSampler
 import torch.nn as nn
 ROWS_PER_FRAME = 543
 
