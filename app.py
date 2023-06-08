@@ -165,7 +165,7 @@ def recordingASL():
             cap.release()
             cv2.destroyAllWindows()
             data = pd.DataFrame(final_landmarks, columns=['x','y','z'])
-
+            final_landmarks = []
             n_frames = int(len(data) / ROWS_PER_FRAME)
             xyz = data.values.reshape(n_frames, ROWS_PER_FRAME, 3).astype(np.float32)
             xyz = xyz - xyz[~np.isnan(xyz)].mean(0,keepdims=True) 
