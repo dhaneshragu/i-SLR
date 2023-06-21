@@ -45,7 +45,7 @@ def generate_frames():
     
 
 def send_image():
-    img_path = "no_cam.png"  
+    img_path = "static\\assets\\images\\no_cam.png"  
     img = cv2.imread(img_path)
 
     # Convert the image to JPEG format
