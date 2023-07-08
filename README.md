@@ -21,7 +21,9 @@ I-SLR is a Machine learning powered webapp aimed at recognizing Indian and Ameri
 ## Video Demo
 https://github.com/dhaneshragu/i-SLR/assets/95169037/442d6144-e3c1-4743-880b-353ac2c05601
 
+## Pipeline
 
+<img alt="Training and Inference Flowchart" src="https://github.com/dhaneshragu/i-SLR/assets/106437020/c451696b-b55d-4344-8975-a4801b3688de" width=500px>
 
 
 
