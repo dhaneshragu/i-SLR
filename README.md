@@ -4,7 +4,7 @@
 
 I-SLR is a Machine learning powered webapp aimed at recognizing Indian and American Sign Language signs, to help the normal people who are learning sign language to test their skills.
 
-## 📗 TechStack Used
+## 📗 TechStack
 <p>
 <img src="https://img.shields.io/badge/Pytorch-EE4C2C?logo=pytorch&logoColor=white&style=flat" />
 <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white&style=flat" />
