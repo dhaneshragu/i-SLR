@@ -1,5 +1,5 @@
 <p align="center">
-    <img src=https://github.com/dhaneshragu/i-SLR/assets/95169037/85637536-bc26-4e62-ae05-0b0347b6bef6 width=200px>
+    <img src=https://github.com/dhaneshragu/i-SLR/assets/95169037/f2400d46-b302-450e-80a1-6abb6ea857cb width=200px>
 </p>
 
 I-SLR is a Machine learning powered webapp aimed at recognizing Indian and American Sign Language signs, to help the normal people who are learning sign language to test their skills.
@@ -19,7 +19,9 @@ I-SLR is a Machine learning powered webapp aimed at recognizing Indian and Ameri
 </p>
 
 ## Video Demo
-https://github.com/dhaneshragu/i-SLR/assets/95169037/d1eacac7-0966-4d42-a9ab-eb139fe8f469
+https://github.com/dhaneshragu/i-SLR/assets/95169037/442d6144-e3c1-4743-880b-353ac2c05601
+
+
 
 
 
