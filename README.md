@@ -16,8 +16,10 @@ I-SLR is a Machine learning powered webapp aimed at recognizing Indian and Ameri
 <img src="https://img.shields.io/badge/JavaScript-f3db1c?logo=javascript&logoColor=white&style=flat" />
 <img src="https://img.shields.io/badge/CSS-264de4?logo=css3&logoColor=white&style=flat" />
 <img src="https://img.shields.io/badge/Streamlit-DB423D?logo=streamlit&logoColor=white&style=flat" />
-
-
 </p>
+
+## Video Demo
+https://github.com/dhaneshragu/i-SLR/assets/95169037/d1eacac7-0966-4d42-a9ab-eb139fe8f469
+
 
 
