@@ -10,14 +10,12 @@ I-SLR is a Machine learning powered webapp aimed at recognizing Indian and Ameri
 <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white&style=flat" />
 <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white&style=flat" />
 <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white&style=flat" />
-<img src="https://img.shields.io/badge/OpenCV-183289?logo=opencv&logoColor=white&style=flat" />
-<img src="https://img.shields.io/badge/JSON-183331?logo=json&logoColor=white&style=flat" />
-<img src="https://img.shields.io/badge/Python-32471?logo=python&logoColor=white&style=flat" />
-<img src="https://img.shields.io/badge/HTML-183331?logo=html5&logoColor=white&style=flat" />
-<img src="https://img.shields.io/badge/JavaScript-183331?logo=javascript&logoColor=white&style=flat" />
-<img src="https://img.shields.io/badge/CSS-183331?logo=css3&logoColor=white&style=flat" />
-    
-<img src="https://img.shields.io/badge/Streamlit-183331?logo=streamlit&logoColor=white&style=flat" />
+<img src="https://img.shields.io/badge/OpenCV-D95D39?logo=opencv&logoColor=white&style=flat" />
+<img src="https://img.shields.io/badge/Python-2596be?logo=python&logoColor=white&style=flat" />
+<img src="https://img.shields.io/badge/HTML-e44d26?logo=html5&logoColor=white&style=flat" />
+<img src="https://img.shields.io/badge/JavaScript-f3db1c?logo=javascript&logoColor=white&style=flat" />
+<img src="https://img.shields.io/badge/CSS-264de4?logo=css3&logoColor=white&style=flat" />
+<img src="https://img.shields.io/badge/Streamlit-DB423D?logo=streamlit&logoColor=white&style=flat" />
 
 
 </p>
