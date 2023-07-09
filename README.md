@@ -55,9 +55,9 @@ Achieved top 5 accuracies of **97.32%** and **95.11%**, and cross-entropy losses
 └── preprocess.py
 ```
 - All the videos will be preprocessed with mediapipe and landmarks will be saved in a csv called `train-preprocessed.csv`.
-- Go to the fine-tuning section of the `iSLR-Notebook.ipynb` and replace the train-csv URL with the `train-preprocessed.csv` path. 
+- Go to the fine-tuning section of the `iSLR-Notebook.ipynb` and replace the train-csv URL with the `train-preprocessed.csv` path.
+- Run `make_json.py` to store signs with respect to their labels into a json file. 
 - Run the notebook and you can get the `model.pth` file which can be replaced in flask webapp to generate predictions !!!
-
 ## To use the app :
 - Make sure you are in the cloned repository folder. 
 - In terminal , type `python app.py` and then the flask webapp will start in your browser.
