@@ -33,7 +33,22 @@ https://github.com/dhaneshragu/i-SLR/assets/95169037/442d6144-e3c1-4743-880b-353
 To be updated
 
 ## How to Use
-### To fine-tune on a dataset
+### To fine-tune on custom dataset of videos :
+- go to `Dataset-Creation Folder` . There are 2 python scripts `dataset_creater.py` and `preprocess.py`. Run `dataset_creator.py` while having the dataset videos in the directory structure as shown :
+```
+/Dataset-Creation
+└── INCLUDE
+    ├── Sign-Category-1
+    └── Sign-Category-2
+        ├── 1.Sign-Name-1
+        ├── 2.Sign-Name-2
+            └── Sign-Video-1.mp4
+            └── Sign-Video-2.mp4
+        └── 3.Sign-Name-3
+└── dataset_creator.py
+└── preprocess.py
+```
+- All the videos will be preprocessed with mediapipe and landmarks will be saved in a csv called `train-preprocessed.csv`.
 
 ## Contributors
 - [Dhanesh](https://github.com/dhaneshragu), CSE , IIT Guwahati.
