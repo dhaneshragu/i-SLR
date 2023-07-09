@@ -4,6 +4,8 @@
 
 I-SLR is a Machine learning powered webapp aimed at recognizing Indian and American Sign Language signs, to help the normal people who are learning sign language to test their skills.
 
+This app can currently recognize 250 American Signs and 64 Indian Sign Signs.
+
 ## 📗 Tech stack
 <p>
 <img src="https://img.shields.io/badge/Pytorch-EE4C2C?logo=pytorch&logoColor=white&style=flat" />
@@ -30,14 +32,15 @@ https://github.com/dhaneshragu/i-SLR/assets/95169037/442d6144-e3c1-4743-880b-353
 <li>The Top 5 signs with the greatest probability are displayed.</li>
 
 ## 📈 Results
-Achieved top 5 accuracies of 97.32% and 95.11%, and cross-entropy losses of 0.534 and 0.766 for training and validation, respectively for the ISL model.
+Achieved top 5 accuracies of **97.32%** and **95.11%**, and cross-entropy losses of **0.534** and **0.766** for training and validation, respectively for the ISL model.
 
 <img alt="ISL evaluation" src="https://github.com/dhaneshragu/i-SLR/assets/106437020/b1817376-ef0b-4af1-b407-bc1fc03bfb7b" width=800px>
 
 
 ## How to Use
+- First of all `git clone` this repository and cd to the appropriate folder
 ### To fine-tune on custom dataset of videos :
-- go to `Dataset-Creation Folder` . There are 2 python scripts `dataset_creater.py` and `preprocess.py`. Run `dataset_creator.py` while having the dataset videos in the directory structure as shown :
+- Go to `Dataset-Creation Folder` . There are 2 python scripts `dataset_creater.py` and `preprocess.py`. Run `dataset_creator.py` while having the dataset videos in the directory structure as shown :
 ```
 /Dataset-Creation
 └── INCLUDE
@@ -52,6 +55,14 @@ Achieved top 5 accuracies of 97.32% and 95.11%, and cross-entropy losses of 0.53
 └── preprocess.py
 ```
 - All the videos will be preprocessed with mediapipe and landmarks will be saved in a csv called `train-preprocessed.csv`.
+- Go to the fine-tuning section of the `iSLR_Notebook.ipynb` and replace the train-csv URL with the `train-preprocessed.csv` path. 
+- Run the notebook and you can get the `model.pth` file which can be replaced in flask webapp to generate predictions !!!
+
+## To use the app :
+- Make sure you are in the cloned repository folder. 
+- In terminal , type `python app.py` and then the flask webapp will start in your browser.
+- Navigate to **Indian Sign Language** and **American Sign Language** section, click ***Start** and sign and click **Stop** when you are done.
+- Viola!! You will get the top-5 predictions of the sign you made.
 
 ## Contributors
 - [Dhanesh](https://github.com/dhaneshragu), CSE , IIT Guwahati.
