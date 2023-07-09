@@ -62,9 +62,9 @@ Achieved top 5 accuracies of **97.32%** and **95.11%**, and cross-entropy losses
 - Make sure you are in the cloned repository folder. 
 - In terminal , type `python app.py` and then the flask webapp will start in your browser.
 - Navigate to **Indian Sign Language** and **American Sign Language** section, click ***Start** and sign and click **Stop** when you are done.
-<img width="602" alt="image" src="https://github.com/dhaneshragu/i-SLR/assets/95169037/b212e175-a947-416f-9c8c-74360d44a7d6"> 
+  <img width="602" alt="image" src="https://github.com/dhaneshragu/i-SLR/assets/95169037/b212e175-a947-416f-9c8c-74360d44a7d6"> 
 - Viola!! You will get the top-5 predictions of the sign you made.
-<img width="602" alt="image" src="https://github.com/dhaneshragu/i-SLR/assets/95169037/85df4b01-3b3c-4dc3-936a-dc342ace8aee">
+  <img width="602" alt="image" src="https://github.com/dhaneshragu/i-SLR/assets/95169037/85df4b01-3b3c-4dc3-936a-dc342ace8aee">
 
 ## Contributors
 - [Dhanesh](https://github.com/dhaneshragu), CSE , IIT Guwahati.
