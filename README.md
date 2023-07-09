@@ -30,7 +30,10 @@ https://github.com/dhaneshragu/i-SLR/assets/95169037/442d6144-e3c1-4743-880b-353
 <li>The Top 5 signs with the greatest probability are displayed.</li>
 
 ## 📈 Results
-To be updated
+Achieved top 5 accuracies of 97.32% and 95.11%, and cross-entropy losses of 0.534 and 0.766 for training and validation, respectively for the ISL model.
+
+<img alt="ISL evaluation" src="https://github.com/dhaneshragu/i-SLR/assets/106437020/b1817376-ef0b-4af1-b407-bc1fc03bfb7b" width=800px>
+
 
 ## How to Use
 ### To fine-tune on custom dataset of videos :
