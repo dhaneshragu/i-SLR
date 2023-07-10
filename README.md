@@ -23,7 +23,7 @@ This app can currently recognize 250 American Signs and 64 Indian Sign Signs.
 ## 📽️ Video Demo
 https://github.com/dhaneshragu/i-SLR/assets/95169037/442d6144-e3c1-4743-880b-353ac2c05601
 
-## 🦾Pipeline
+## 🧪 Pipeline
 <p align="center">
 <img alt="Training and Inference Flowchart" src="https://github.com/dhaneshragu/i-SLR/assets/106437020/c451696b-b55d-4344-8975-a4801b3688de" width=500px>
 </p>
@@ -37,9 +37,8 @@ Achieved top 5 accuracies of **97.32%** and **95.11%**, and cross-entropy losses
 <img alt="ISL evaluation" src="https://github.com/dhaneshragu/i-SLR/assets/106437020/b1817376-ef0b-4af1-b407-bc1fc03bfb7b" width=800px>
 
 
-## How to Use
+## 🤩 Build your own sign language recognizer using i-SLR
 - First of all `git clone` this repository and cd to the appropriate folder
-### To fine-tune on custom dataset of videos :
 - Go to `Dataset-Creation Folder` . There are 2 python scripts `dataset_creater.py` and `preprocess.py`. Run `dataset_creator.py` while having the dataset videos in the directory structure as shown :
 ```
 /Dataset-Creation
@@ -58,7 +57,7 @@ Achieved top 5 accuracies of **97.32%** and **95.11%**, and cross-entropy losses
 - Go to the fine-tuning section of the `iSLR-Notebook.ipynb` and replace the train-csv URL with the `train-preprocessed.csv` path.
 - Run `make_json.py` to store signs with respect to their labels into a json file. 
 - Run the notebook and you can get the `model.pth` file which can be replaced in flask webapp to generate predictions !!!
-## To use the app :
+## 👤 To use the app :
 - Make sure you are in the cloned repository folder. 
 - In terminal , type `python app.py` and then the flask webapp will start in your browser.
 
@@ -70,7 +69,7 @@ Achieved top 5 accuracies of **97.32%** and **95.11%**, and cross-entropy losses
 
   <img width="602" alt="image" src="https://github.com/dhaneshragu/i-SLR/assets/95169037/85df4b01-3b3c-4dc3-936a-dc342ace8aee">
 
-## Contributors
+## 🦾 Contributors
 - [Dhanesh](https://github.com/dhaneshragu), CSE , IIT Guwahati.
 - [Prabhanjan Jadhav](https://github.com/prabhanjan-jadhav), ECE , IIT Guwahati.
 
